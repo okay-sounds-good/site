@@ -8,7 +8,7 @@
    [:div.section
     [:div.container
      [:h1 "Okay sounds good!"]
-     [:p "AHHHHH this is so siiick"]]]
+     [:p "AHHHHH is so siiick"]]]
    (layout "OSG" "foooooobar")))
 
 

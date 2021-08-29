@@ -8,7 +8,7 @@
    [:meta {:charset "utf-8"}]
    [:meta {:name "Description" :content description}]
    [:link {:href "https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css" :rel "stylesheet"}]
-   [:link {:href "/css/site.css" :rel "stylesheet"}]])
+   [:link {:href "/css/site.css" :type "text/css" :rel "stylesheet"}]])
 
 (defn layout
   [body title description]
