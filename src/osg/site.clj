@@ -1,15 +1,14 @@
 (ns osg.site
   (:gen-class)
-  (:require [stasis.core :as stasis]
-            [osg.util :refer [layout]]
-            [hiccup.core :as hiccup]))
+  (:require [hiccup.core :as hiccup]
+            [osg.util :refer [layout]]))
 
 (def body
   (->
    [:div.section
     [:div.container
      [:h1 "Okay sounds good!"]
-     [:p "fuuck yes"]]]
+     [:p "AHHHHH this is so siiick"]]]
    (layout "OSG" "foooooobar")))
 
 
