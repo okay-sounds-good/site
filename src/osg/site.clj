@@ -1,12 +1,17 @@
 (ns osg.site
-  (:gen-class))
+  (:gen-class)
+  (:require [stasis.core :as stasis]
+            [osg.util :refer [layout]]
+            [hiccup.core :as hiccup]))
 
-(defn greet
-  "Callable entry point to the application."
-  [data]
-  (println (str "Hello, " (or (:name data) "World") "!")))
+(def body
+  (->
+   [:div.section
+    [:div.container
+     [:h1 "Okay sounds good!"]]]
+   (layout "OSG" "foooooobar")))
 
-(defn -main
-  "I don't do a whole lot ... yet."
-  [& args]
-  (greet {:name (first args)}))
+
+(defn get-pages []
+  (merge {"/index.html" (hiccup/html body)}))
+
