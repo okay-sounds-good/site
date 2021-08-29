@@ -8,6 +8,7 @@
             [optimus.optimizations :as optimizations]
             [optimus.strategies :refer [serve-live-assets]]
             [optimus.export]
+            [ring.middleware.refresh :refer [wrap-refresh]]
             [ring.middleware.content-type :refer [wrap-content-type]]))
 
 ;; (def watcher (atom nil))
@@ -43,4 +44,5 @@
   "Serves the rendered HTML locally for development with hot reloading."
   (-> (stasis/serve-pages site/get-pages)
       (optimus/wrap get-public-assets optimizations/none serve-live-assets)
-      wrap-content-type))
+      wrap-content-type
+      wrap-refresh))

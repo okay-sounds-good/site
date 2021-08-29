@@ -6,7 +6,8 @@
          com.bhauman/figwheel-main {:mvn/version "0.2.14"}
          hiccup/hiccup             {:mvn/version "1.0.5"}
          hawk/hawk                 {:mvn/version "0.2.11"}
-         ring/ring                 {:mvn/version "1.9.4"}}
+         ring/ring                 {:mvn/version "1.9.4"}
+         ring-refresh/ring-refresh {:mvn/version "0.1.2"}}
  :aliases
  {:hotness {:main-opts ["-m" "osg.dev"]}
   :build   {:main-opts ["-m" "osg.build"]}
