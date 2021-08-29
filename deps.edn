@@ -5,9 +5,10 @@
          optimus/optimus           {:mvn/version "1.0.0-rc3"}
          hiccup/hiccup             {:mvn/version "1.0.5"}
          ring/ring                 {:mvn/version "1.9.4"}
-         ring-refresh/ring-refresh {:mvn/version "0.1.2"}}
+         ring-refresh/ring-refresh {:mvn/version "0.1.2"}
+         hickory/hickory           {:mvn/version "0.7.1"}}
  :aliases
- {:build        {:main-opts ["-m" "osg.build"]}
+ {:generate     {:main-opts ["-m" "osg.build"]}
   :serve-live   {:extra-deps {mtkp/ring-dev {:git/url "https://github.com/mtkp/ring-dev"
                                              :sha     "330d8318790939a4b7d8cab01712415e63c62618"}}
                  :main-opts  ["-m" "mtkp.ring-dev.main" "osg.dev/serve-live!"]}
@@ -19,10 +20,4 @@
                                io.github.cognitect-labs/test-runner
                                {:git/url "https://github.com/cognitect-labs/test-runner"
                                 :sha     "62ef1de18e076903374306060ac0e8a752e57c86"}}
-                 :exec-fn     cognitect.test-runner.api/test}
-  :uberjar      {:replace-deps {com.github.seancorfield/depstar {:mvn/version "2.1.267"}}
-                 :exec-fn      hf.depstar/uberjar
-                 :exec-args    {:aot        true
-                                :jar        "site.jar"
-                                :main-class "osg.site"
-                                :sync-pom   true}}}}
+                 :exec-fn     cognitect.test-runner.api/test}}}
