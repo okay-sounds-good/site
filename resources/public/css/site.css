@@ -5,3 +5,13 @@ p {
 .cropped {
     object-fit: none;
 }
+
+html, body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+body > footer {
+    margin-top: auto;
+}
